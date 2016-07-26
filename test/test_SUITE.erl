@@ -79,7 +79,7 @@ init_per_testcase(with_backend = Testcase, Config) ->
                                                     ]}]),
     Config1 = rabbit_ct_helpers:set_config(Config, {backend_port, Port}),
     % wait for backend to start
-    timer:sleep(5000),
+    timer:sleep(10000),
     rabbit_ct_helpers:testcase_started(Config1, Testcase).
 
 end_per_testcase(with_backend = Testcase, Config) ->
